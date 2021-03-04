@@ -7,7 +7,6 @@ import org.springframework.web.client.RestTemplate;
 
 import java.io.*;
 import java.util.List;
-import java.util.zip.GZIPInputStream;
 
 import static com.andreervilha.evoluum.springboottest.utils.TempoUtils.aguardar;
 
@@ -48,8 +47,7 @@ public class RequestUtils {
             logger.log("Descompactando");
 
             InputStream inputStream = new ByteArrayInputStream(responseBytes);
-            GZIPInputStream gzipInputStream = new GZIPInputStream(inputStream);
-            String json = getStrigJsonFromGzip(gzipInputStream);
+            String json = getStringJson(inputStream);
 
             logger.log("Descompactado");
             logger.log("Mapeando para objetos");
@@ -66,7 +64,7 @@ public class RequestUtils {
         }
     }
 
-    private String getStrigJsonFromGzip(GZIPInputStream gzipInputStream) throws IOException {
+    private String getStringJson(InputStream gzipInputStream) throws IOException {
         String charset = "UTF-8";
         Reader reader = new InputStreamReader(gzipInputStream, charset);
         Writer writer = new StringWriter();
@@ -77,5 +75,4 @@ public class RequestUtils {
         }
         return writer.toString();
     }
-
 }

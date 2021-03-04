@@ -6,13 +6,16 @@ public class Cidade extends AreaMenor {
 
     @JsonProperty("microrregiao")
     private MicroRegiao microRegiao;
+    @JsonProperty("regiao-imediata")
+    private MicroRegiao regiaoImediata;
 
     public Cidade() {
     }
 
-    public Cidade(long id, String nome, MicroRegiao microRegiao) {
+    public Cidade(long id, String nome, MicroRegiao microRegiao, MicroRegiao regiaoImediata) {
         super(id, nome);
         this.microRegiao = microRegiao;
+        this.regiaoImediata = regiaoImediata;
     }
 
     public MicroRegiao getMicroRegiao() {
@@ -23,4 +26,11 @@ public class Cidade extends AreaMenor {
         this.microRegiao = microRegiao;
     }
 
+    public MicroRegiao getRegiaoImediata() {
+        return regiaoImediata;
+    }
+
+    public void setRegiaoImediata(MicroRegiao regiaoImediata) {
+        this.regiaoImediata = regiaoImediata;
+    }
 }

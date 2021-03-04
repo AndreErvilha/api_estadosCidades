@@ -1,4 +1,4 @@
-package com.andreervilha.evoluum.springboottest.models;
+    package com.andreervilha.evoluum.springboottest.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

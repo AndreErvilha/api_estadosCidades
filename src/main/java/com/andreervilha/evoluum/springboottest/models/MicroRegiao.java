@@ -6,20 +6,27 @@ public class MicroRegiao extends AreaMenor {
 
     @JsonProperty("mesorregiao")
     private MesoRegiao mesoRegiao;
+    @JsonProperty("regiao-intermediaria")
+    private MesoRegiao regiaoIntermediaria;
 
     public MicroRegiao() {
     }
 
-    public MicroRegiao(long id, String nome, MesoRegiao mesoRegiao) {
+    public MicroRegiao(long id, String nome, MesoRegiao mesoRegiao, MesoRegiao regiaoIntermediaria) {
         super(id, nome);
         this.mesoRegiao = mesoRegiao;
+        this.regiaoIntermediaria = regiaoIntermediaria;
     }
 
     public MesoRegiao getMesoRegiao() {
         return mesoRegiao;
     }
 
-    public void setMesoRegiao(MesoRegiao mesoRegiao) {
-        this.mesoRegiao = mesoRegiao;
+    public MesoRegiao getRegiaoIntermediaria() {
+        return regiaoIntermediaria;
+    }
+
+    public void setRegiaoIntermediaria(MesoRegiao regiaoIntermediaria) {
+        this.regiaoIntermediaria = regiaoIntermediaria;
     }
 }
