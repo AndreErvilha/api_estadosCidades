@@ -16,12 +16,12 @@ https://servicodados.ibge.gov.br/api/docs/localidades
 
 d. Os campos do CSV/JSON deverá ser:
 
-* *i.idEstado*
-* *ii.siglaEstado*
-* *iii.regiaoNome*
-* *iv.nomeCidade*
-* *v.nomeMesorregiao*
-* *vi.nomeFormatado {cidade/UF}*
+* *idEstado*
+* *siglaEstado*
+* *regiaoNome*
+* *nomeCidade*
+* *nomeMesorregiao*
+* *nomeFormatado {cidade/UF}*
 
 *Abaixo seguem os requisitos da biblioteca a ser desenvolvida.*
 
