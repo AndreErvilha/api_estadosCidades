@@ -23,7 +23,7 @@ d. Os campos do CSV/JSON deverá ser:
 * *nomeMesorregiao*
 * *nomeFormatado {cidade/UF}*
 
-*Abaixo seguem os requisitos da biblioteca a ser desenvolvida.*
+# Abaixo seguem os requisitos da biblioteca a ser desenvolvida.
 
 a. NO CSV, a primeira linha (cabeçalho) deve conter o nome de cada campo e 
 *a(s) linha(s) subsequente(s) deve(m) conter os valores resultante da consulta*
@@ -42,17 +42,24 @@ enviado mais de uma vez, evite a chamada do serviço externo.*
 *f. No endpoint do CSV deverá retornar um objeto do tipo  java.io.OutputStream*
 *como saída da transformação.*
 
-1. Deverá usar somente o Spring boot e suas bibliotecas;
-2. Os procedimentos da biblioteca devem ser logados utilizando o
-   mecanismo de Log do Java;
-3. Nível de cumprimento dos requisitos;
-4. Abrangência dos testes unitários;
-5. A estrutura da biblioteca deverá ser flexível a ponto de permitir
-   o fácil desenvolvimento de futuros formatos de exportação,
-   como XML;
-6. Uso adequado de padrões de projetos;
-   Flexibilidade do código para futuras evoluções;
-   Clean code;
+# Sobre a avaliação
+
+* a. Os procedimentos da biblioteca devem ser logados utilizando o mecanismo de Log do Java;
+* b. Nível de cumprimento dos requisitos;
+* c. Abrangência dos testes unitários de 30% de cobertura;
+* d. Deverá usar somente o Spring boot e suas bibliotecas;
+* e. Abrangência dos testes unitários de 70% de cobertura;
+* f. A estrutura da biblioteca deverá ser flexível a ponto de permitir o fácil desenvolvimento de futuros formatos de exportação, como XML;
+* g. Uso adequado de padrões de projetos;
+* h. Flexibilidade do código para futuras evoluções;
+* i. Clean code;
+* j. Utilização de princípios SOLID;
+* k. Utilização de design patterns;
+* l. Otimizações em relação ao uso de memória;
+* m. Utilização de bibliotecas corretas do Spring Boot;
+* n. Implementação de Circuit Breaker no acesso aos serviços externos;
+* o. Implementação do Swagger nas API;
+* p. Implementação correta do Cache.
 
 ## Considerações sobre a solução
 
